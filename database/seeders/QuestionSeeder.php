@@ -15,39 +15,15 @@ class QuestionSeeder extends Seeder
     public function run()
     {
         DB::table('questions')->insert([
-            'test_id' => 1,
-            'title' => "Expert",
-            'is_correct' => true,
-        ]);
-
-        DB::table('questions')->insert([
-            'test_id' => 1,
-            'title' => "I've heard a thing or two",
-            'is_correct' => false,
-        ]);
-
-        DB::table('questions')->insert([
-            'test_id' => 1,
-            'title' => "Beginner",
-            'is_correct' => false,
-        ]);
-
-        DB::table('questions')->insert([
-            'test_id' => 2,
-            'title' => "I mostly eat well and stay active",
-            'is_correct' => true,
-        ]);
-
-        DB::table('questions')->insert([
-            'test_id' => 2,
-            'title' => "I have some healthy habits, but I'm not perfect",
-            'is_correct' => false,
+            'name' => "How familiar are you with the Keto diet?",
+            'type' => config('app.available_question_types')['Выбор одного'],
+            'order' => 0,
         ]);
         
         DB::table('questions')->insert([
-            'test_id' => 2,
-            'title' => "My diet and activity levels could use some help",
-            'is_correct' => false,
+            'name' => "Our lifestyle also has a great impact on our metabolic age. Which of these statements best describes yours?",
+            'type' => config('app.available_question_types')['Выбор одного'],
+            'order' => 1,
         ]);
     }
 }

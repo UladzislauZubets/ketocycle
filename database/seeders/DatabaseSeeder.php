@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
+use Database\Seeders\QuestionSeeder;
+use Database\Seeders\AnswerSeeder;
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,8 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
-            TestSeeder::class,
             QuestionSeeder::class,
+            AnswerSeeder::class,
         ]);
     }
 }

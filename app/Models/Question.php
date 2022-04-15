@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Answer;
+
 class Question extends Model
 {
     /**
@@ -12,17 +14,16 @@ class Question extends Model
      * @var array
      */
     protected $fillable = [
-        'test_id',
-        'title',
-        'is_correct',
+        'name',
+        'type',
+        'order',
     ];
 
     /**
-     * The attributes that should be cast.
-     *
-     * @var array
+     * Get question answers.
      */
-    protected $casts = [
-        'is_correct' => 'boolean',
-    ];
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
 }

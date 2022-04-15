@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
 
-use App\Models\Test;
+use App\Models\Question;
 
 class TestController extends Controller
 {
@@ -15,12 +15,12 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = Test::orderBy('order')->with('questions')->get();
+        $tests = Question::orderBy('order')->with('answers')->get();
 
         if(!$tests) {
             return response()->json([
                 'status' => false,
-                'error' => "App has no Tests."
+                'error' => "App has no Questions."
             ]);
         }
 
@@ -38,12 +38,12 @@ class TestController extends Controller
      */
     public function show($id)
     {
-        $test = Test::with('questions')->find($id);
+        $test = Question::with('answers')->find($id);
 
         if(!$test) {
             return response()->json([
                 'status' => false,
-                'error' => "Test with id {$id} not found."
+                'error' => "Question with id {$id} not found."
             ]);
         }
 

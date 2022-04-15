@@ -15,4 +15,4 @@ use App\Http\Controllers\Api\v1\TestController;
 |
 */
 
-Route::resource('tests', TestController::class)->only(['index', 'show']);
+Route::resource('questions', TestController::class)->only(['index', 'show']);
