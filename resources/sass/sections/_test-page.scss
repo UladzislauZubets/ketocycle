@@ -1,0 +1,22 @@
+.test-page {
+    width: 100%;
+    min-height: 56.25rem;
+    position: relative;
+
+    @media(max-width: 768px) {
+        min-height: max-content;
+    }
+
+    @media(min-width: 768px) {
+        &:before {
+            content: "";
+            top: 0;
+            right: 0;
+            position: absolute;
+            width: 940px;
+            height: 475px;
+            background-image: url('../img/bg.jpg');
+        }
+    }
+    
+}

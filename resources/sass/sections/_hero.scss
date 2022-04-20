@@ -1,0 +1,183 @@
+.hero {
+    width: 100%;
+    height: max-contnet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    box-sizing: border-box;
+    
+    .hero-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        @media(max-width: 992px) {
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        // @media(max-width: 768px) {
+        //     gap: 2rem;
+        // }
+
+        @media(max-width: 576px) {
+            gap: 1rem;
+        }
+
+        & > .hero-text {
+            padding-left: 3rem;
+            max-width: 37rem;
+            width: 100%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            box-sizing: border-box;
+
+            @media(max-width: 1200px) {
+                padding-left: 1rem;
+            }
+            @media(max-width: 768px) {
+                padding-left: 0;
+            }
+            @media(max-width: 576px) {
+                max-width: unset;
+                gap: 1rem;
+            }
+
+            & > .hero-text-title {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 2.75rem;
+                line-height: 3.125rem;
+                color: $primary-color;
+
+                @media(max-width: 576px) {
+                    font-weight: 900;
+                    font-size: 2rem;
+                    line-height: 130%;
+                }
+            }
+
+            & > .hero-select-gender {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                @media(max-width: 576px) {
+                    gap: 1rem;
+                }
+
+                & > .hero-select-gender-text {
+                    color: $text-primary-color;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+
+                    @media(max-width: 768px) {
+                        font-size: 1.6rem;
+                    }
+
+                    @media(max-width: 576px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                & > .hero-select-gender-actions {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1rem;
+
+                    @media(max-width: 1200px) {
+                        flex-wrap: wrap;
+                    }
+
+                    & > .gender-action {
+                        width: 100%;
+                        background-color: #fff;
+                        padding: 0.8rem 1rem;
+                        border-radius: 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 0.5rem;
+                        align-items: center;
+
+                        transition: .2s ease;
+
+                        @media(max-width: 1200px) {
+                            max-width: 16rem;
+                        }
+
+                        & > .icon {
+                            width: 2rem;
+                            height: 2rem;
+
+                            & > img {
+                                width: 2rem;
+                                height: 2rem;
+                            }
+
+                            & > svg {
+                                transition: transform .2s ease;
+                            }
+                        }
+                        
+                        &.women {
+                            color: $primary-color;
+                            box-shadow: 3px 3px 10px 1px rgba($primary-color,.2);
+                            
+                            & > .icon > svg > path {
+                                fill: $primary-color;
+                            }
+
+                            &:hover {
+                                box-shadow: 5px 5px 15px 1px rgba($primary-color,.2);
+                            }
+                        }
+                        &.men {
+                            color: $secondary-color;
+                            box-shadow: 3px 3px 10px 1px rgba($secondary-color,.2);
+                        
+                            & > .icon > svg > path {
+                                fill: $secondary-color;
+                            }
+
+                            &:hover {
+                                box-shadow: 5px 5px 15px 1px rgba($secondary-color,.2);
+                            }
+                        }
+
+                        &:hover > .icon > svg {
+                            transform: translateX(0.5rem);
+                        }
+                    }
+                }
+            }
+        }
+
+        & > .hero-image {
+            width: 33.25rem;
+            height: 31.75rem;
+            background-image: url('../img/hero-image.jpg');
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media(max-width: 992px) {
+                order: -1;
+                width: 100%;
+                height: 30.25rem;
+                margin: unset;
+            }
+
+            @media(max-width: 768px) {
+                height: 20.25rem;
+            }
+
+            @media(max-width: 576px) {
+                height: 11.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.app {
+    width: 100%;
+    background-color: #F3F4F8;
+    padding-top: 4rem;
+
+    @media(max-width: 768px) {
+        padding-top: 2.5rem;
+    }
+
+    & > .app-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        letter-spacing: -0.01em;
+        color: #222222;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 3.25rem;
+        box-sizing: border-box;
+
+        @media(max-width: 768px) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media(max-width: 576px) {
+            padding: 0 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    & > .app-description {
+        display: flex;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 0 1rem;
+        box-sizing: border-box;
+
+        @media(max-width: 992px) {
+            flex-wrap: wrap;
+        }
+
+        & > .app-description-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @media(max-width: 992px) {
+                width: 100%;
+                align-items: center;
+            }
+
+            @media(max-width: 576px) {
+                padding: 0 1.5rem;
+                align-items: unset;
+                box-sizing: border-box;
+            }
+
+            & > .app-description-text-item {
+                padding-left: 2rem;
+                position: relative;
+                max-width: 26.5rem;
+                box-sizing: border-box;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    background-image: url('../img/check-icon.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                & > .app-description-text-item-title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #222222;
+                    margin-bottom: 0.5rem;
+                }
+
+                & > .app-description-text-item-text {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                    color: #222222;
+                }
+            }
+        }
+
+        & > .app-description-images {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            @media(max-width: 992px) {
+                width: 100%;
+            }
+
+            & > .app-decsription-images-phones {
+                width: 31.125rem;
+                box-sizing: border-box;
+
+                @media(max-width: 992px) {
+                    width: 80%;
+                }
+
+                @media(max-width: 576px) {
+                    width: 100%;
+                }
+            }
+
+            
+        }
+    }
+}

@@ -204,4 +204,6 @@ return [
         'Выбор нескольких' => 'checkbox',
         'Выбор одного' => 'radio',
     ],
+
+    'mix_url' => env('MIX_ASSET_URL', 'localhost'),
 ];

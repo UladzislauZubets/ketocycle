@@ -1,0 +1,85 @@
+.test-result {
+    width: 100%;
+
+    & > .test-result-title {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 3.5rem;
+        letter-spacing: -0.01em;
+        color: #222222;
+        margin-bottom: 1.5rem;
+
+        @media(max-width: 768px) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    & > .test-result-line {
+        width: 100%;
+        background-color: #F7F7F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem 0;
+        margin-bottom: 2.75rem;
+
+        @media(max-width: 768px) {
+            overflow-y: auto;
+            justify-content: flex-start;
+        }
+
+        @media(max-width: 576px) {
+            padding: 0.75rem 0;
+        }
+
+        & > .test-result-item {
+            background-color: #FFFFFF;
+            border: 1px solid rgba(86, 70, 143, 0.2);
+            box-sizing: border-box;
+            border-radius: 12px;
+            padding: 0.5rem 0.5rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            min-width: 8rem;
+            width: max-content;
+            box-sizing: border-box;
+
+            @media(max-width: 768px) {
+                &:first-child {
+                    margin-left: 1rem;
+                }
+    
+                &:last-child {
+                    margin-right: 1rem;
+                }
+            }
+            
+            & > .test-result-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 2rem;
+                height: 2rem;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 1.5rem;
+                line-height: 2rem;
+                text-align: center;
+                color: $secondary-color;
+
+                &.warning {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

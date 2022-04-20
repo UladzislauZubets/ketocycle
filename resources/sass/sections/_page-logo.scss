@@ -1,0 +1,22 @@
+.page-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 2rem 0;
+
+    @media(max-width: 768px) {
+        padding: 2rem 0;
+    }
+
+    & > .header-logo {
+        display: inline-block;
+        height: 2.5rem;
+        width: max-content;
+
+        & > img {
+            height: 100%;
+            width: auto;
+        }
+    }
+}

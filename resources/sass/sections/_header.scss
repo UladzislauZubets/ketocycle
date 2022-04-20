@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+
+    .header-wrapper {
+        padding: 2rem 0;
+        display: flex;
+        justify-content: flex-start;
+
+        @media(max-width: 768px) {
+            justify-content: center;
+        }
+
+        & > .header-logo {
+            display: inline-block;
+            height: 2.5rem;
+            width: max-content;
+
+            & > img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    
+}
